@@ -8,12 +8,12 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Event sync') }}</title>
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
         <!-- Fonts -->
         <link rel="dns-prefetch" href="//fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
         <!-- Scripts -->
-        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
         @stack('css')
     </head>
     <body>
@@ -23,9 +23,9 @@
                 @yield('content')
             </main>
         </div>
-        <script type='module'>
-            console.log($)
-        </script>
-        @stack('script')
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></script>
     </body>
+     
 </html>
